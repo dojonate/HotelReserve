@@ -1,0 +1,31 @@
+﻿body {
+}
+
+#selections {
+    width: 90%;
+    min-width: 400px;
+    max-width: 700px;
+    float:initial;
+}
+
+#findHotelLbl {
+
+}
+
+#hotelImageHeader {
+    width: 100%;
+    min-width: 400px;
+}
+.leftLabel {
+    float:left;
+    border-left-width:2px
+}
+.AlignTable {
+    align-items:center;
+    text-align:left;
+}
+#hotelImage {
+    width:100%;
+    max-width:1024px;
+    min-width:800px;
+}

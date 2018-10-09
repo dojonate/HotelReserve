@@ -1,0 +1,38 @@
+5
+Hilton Garden Inn
+Hilton.png
+Restaurant and bar/lounge,Outdoor pool,Free Breakfast,Fitness center,24-hour business center,Coffee/tea in a common area,Air conditioning,Daily housekeeping,Lobby fireplace,Front desk safe,Convenience store,Free WiFi and free parking
+3
+One King,139
+Two Queen Beds,139
+One Kng Mob Hearing Acc W Tub,115
+Best Western Plus
+BestWesternPlus.png
+Outdoor pool,Free area shuttle,24-hour fitness center,24-hour business center,24-hour front desk,Air conditioning,Daily housekeeping,Computer station,Front desk safe,Convenience store,Laundry service,Free WiFi and free parking
+5
+1 King Bed and Non Smoking,80
+1 King Bed with Sofa bed and Non Smoking,80
+2 Double Beds and Non Smoking,90
+2 Queen Beds and Non Smoking,90
+2 Queen Beds and Smoking,90
+Hampton Inn & Suites by Hilton
+HamptonInnSuites.png
+Outdoor pool,Fitness center,24-hour business center,24-hour front desk,Coffee/tea in a common area,Air conditioning,Daily housekeeping,Computer station,Lobby fireplace,Convenience store,ATM/banking services,Free hot/cold buffet breakfast,Free WiFi,Free parking
+4
+Standard 1 King,94
+Standard 2 Queens,114
+Study 1 King with Sofabed,124
+2 Queens Suite with Sofabed and Kitchenette,144
+Extended Stay America
+ExtendedStay.png
+Seasonal outdoor pool,Fitness center,24-hour front desk,Coffee/tea in a common area,Air conditioning,Front desk safe,Self-serve laundry,Picnic area,Barbecue grills,Luggage storage,TV in a common area,Free breakfast,Free WiFi,Free parking
+1
+Studio 1 Queen Bed and Non Smoking,67
+Motel 6
+Motel6.png
+Outdoor pool,24-hour front desk,Coffee/tea in a common area,Air conditioning,Daily housekeeping,Self-serve laundry,Free WiFi,Free parking
+4
+1 King Bed,56
+2 Queen Beds,56
+1 King Bed with Refrigerator and Microwave,61
+2 Queen Beds with Refrigerator and Microwave,61
