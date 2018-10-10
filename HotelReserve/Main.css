@@ -8,14 +8,17 @@
     float:initial;
 }
 
-#findHotelLbl {
-
+#roomSelect{
+    background-color:lightgray;
 }
 
 #hotelImageHeader {
-    width: 100%;
-    min-width: 400px;
+    height:50%
 }
+#hotelRooms {
+    width:600px;
+}
+
 .leftLabel {
     float:left;
     border-left-width:2px
@@ -24,8 +27,13 @@
     align-items:center;
     text-align:left;
 }
-#hotelImage {
-    width:100%;
-    max-width:1024px;
-    min-width:800px;
+.hotelImage {
+    width: 600px;
+    vertical-align:top;
+    crop:rect(10%, 0px, 10%, 0px)
 }
+.amenitiesList {
+   column-count:2;
+   max-width:600px;
+}
+
