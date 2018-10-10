@@ -109,6 +109,7 @@ namespace HotelReserve
                         isNumOfHotelRoomTypes = false;
                         hotels[hotelNum].HotelRoomTypes = int.Parse(lines[i]);
                         remainingNumOfHotelRooms = hotels[hotelNum].HotelRoomTypes;
+                        hotels[hotelNum].HotelRoomPriceDict.Clear();
                         isHotelRoomType = true;
                         continue;
                     } else if (isHotelRoomType)
