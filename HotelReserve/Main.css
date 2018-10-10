@@ -15,7 +15,8 @@
 #hotelImageHeader {
     width: 100%;
     min-width: 400px;
-}
+    max-width: 1024px;
+}\
 .leftLabel {
     float:left;
     border-left-width:2px
@@ -24,8 +25,8 @@
     align-items:center;
     text-align:left;
 }
-#hotelImage {
-    width:100%;
+.hotelImage {
+    width:1d00%;
     max-width:1024px;
     min-width:800px;
 }

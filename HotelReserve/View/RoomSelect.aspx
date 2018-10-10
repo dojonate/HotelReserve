@@ -10,8 +10,9 @@
 <body>
     <form id="form1" runat="server">
         <div id="hotelImageHeader">
-            <asp:Image ID="hotelImage" runat="server" ImageUrl=""/>
+            <asp:Image ID="hotelImage" runat="server" ImageUrl="" CssClass="hotelImage"/>
         </div>
+        <asp:BulletedList ID="hotelAmenities" runat="server"></asp:BulletedList>
         <asp:Table ID="hotelRooms" runat="server">
 
         </asp:Table>
