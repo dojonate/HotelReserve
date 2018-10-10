@@ -33,8 +33,7 @@ namespace HotelReserve.View
                     price.Text = room.Value.ToString();
                     button.Text = "Reserve";
                     button.OnClientClick = "button_Click";
-                    button.PostBackUrl = "~/View/Confirmation.aspx";
-
+                    button.PostBackUrl = "Confirmation.aspx";
                     button.AccessKey = i.ToString();
                     button.BackColor = System.Drawing.Color.CornflowerBlue;
                     button.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -50,6 +49,7 @@ namespace HotelReserve.View
         {
             Button button = sender as Button;
             Customer.SelectedRoom = Customer.Hotel.HotelRoomPriceDict.ElementAt(int.Parse(button.AccessKey));
+            System.Diagnostics.Debug.WriteLine(button.AccessKey);
         }
     }
 }
