@@ -8,11 +8,15 @@
     <link href="../Main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div id="hotelImageHeader">
-            <asp:Image ID="hotelImage" runat="server" ImageUrl=""/>
+    <form id="roomSelect" runat="server">
+        <div id="hotelImage" class="hotelImage">
+            <asp:Image ID="hotelImage" runat="server" ImageUrl="" CssClass="hotelImage"/>
         </div>
-        <asp:Table ID="hotelRooms" runat="server">
+        <div class="amenitiesList">
+            <asp:BulletedList ID="hotelAmenities" runat="server"></asp:BulletedList>
+        </div>
+        <br />
+        <asp:Table ID="hotelRooms" runat="server" CssClass="AlignTable">
 
         </asp:Table>
     </form>

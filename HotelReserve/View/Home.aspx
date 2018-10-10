@@ -11,13 +11,13 @@
     <form id="form1" runat="server">
         <div id="selections">
             
-            
             <asp:Table ID="Table1" runat="server" class="AlignTable">
                 <asp:TableRow runat="server" Width="100%">
                     <asp:TableCell columnspan="2" runat="server">
                         <asp:Label ID="destinationLbl" runat="server" Text="Destination" class ="leftLabel"></asp:Label>
                         <br />
-                        <asp:DropDownList ID="hotelSelectDdl" Width="100%" runat="server" AutoPostBack="true" VerticalAlign="Top" Height="40px"></asp:DropDownList>
+                        <asp:DropDownList ID="hotelSelectDdl" runat="server" AutoPostBack="true" 
+                                          VerticalAlign="Top" Height="40px"></asp:DropDownList>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow runat="server" Width="100%">
