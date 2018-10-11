@@ -31,36 +31,25 @@ namespace HotelReserve
                 }
                 hotelSelectDdl.DataSource = hotelNames.ToArray();
                 hotelSelectDdl.DataBind();
-            }
-            hotel selectedHotel = new hotel();
-            foreach (hotel possibleHotel in hotels)
-            {
-                System.Diagnostics.Debug.WriteLine("Hotel: " + possibleHotel.HotelName + "\n Selected hotel: " + hotelSelectDdl.SelectedValue);
-                if (possibleHotel.HotelName == hotelSelectDdl.SelectedValue)
-                {
-                    selectedHotel = possibleHotel;
 
-                    System.Diagnostics.Debug.WriteLine("found hotel");
-                    break;
+                roomOptionsDdl.Items.Clear();
+                for (int i = 1; i < 10; i++)
+                {
+                    if (i % 3 == 1)
+                    {
+                        roomOptionsDdl.Items.Add(new ListItem(((int)(i / 3) + 1).ToString() + " rooms, " + i.ToString() + " adults", ((int)(i / 3) + 1).ToString()));
+                    }
+                    else if (i % 3 == 2)
+                    {
+                        roomOptionsDdl.Items.Add(new ListItem(((int)(i / 3) + 1).ToString() + " rooms, " + i.ToString() + " adults", ((int)(i / 3) + 1).ToString()));
+                    }
+                    else // if (i%3 == 0)
+                    {
+                        roomOptionsDdl.Items.Add(new ListItem(((int)(i / 3)).ToString() + " rooms, " + i.ToString() + " adults", ((int)(i / 3)).ToString()));
+                    }
                 }
             }
 
-            Customer.Hotel = selectedHotel;
-
-            roomOptionsDdl.Items.Clear();
-            for (int i = 1; i < 10; i++)
-            {
-                if (i%3 == 1)
-                {
-                    roomOptionsDdl.Items.Add(new ListItem(((int)(i/3)+1).ToString()+" rooms, "+i.ToString()+" adults", ((int)(i/3)+1).ToString()));
-                } else if (i%3 == 2)
-                {
-                    roomOptionsDdl.Items.Add(new ListItem(((int)(i/3)+1).ToString()+" rooms, "+i.ToString()+" adults",((int)(i/3)+1).ToString()));
-                } else // if (i%3 == 0)
-                {
-                    roomOptionsDdl.Items.Add(new ListItem(((int)(i / 3)).ToString() + " rooms, " + i.ToString() + " adults", ((int)(i / 3)).ToString()));
-                }
-            }
 
         }
 
@@ -68,7 +57,7 @@ namespace HotelReserve
         {
             if (hotels != new List<hotel>())
             {
-                string[] lines = System.IO.File.ReadAllLines(@"C:\Users\littl\source\repos\HotelReserve\HotelReserve\App_Data\input.txt");
+                string[] lines = System.IO.File.ReadAllLines(Server.MapPath("~/App_Data/")+"input.txt");
                 bool newHotel = true;
                 bool isHotelFileName = false;
                 bool isHotelAmenitiesList = false;
@@ -130,26 +119,21 @@ namespace HotelReserve
         }
 
         protected void hotelSelectDdl_SelectedIndexChanged(object sender, EventArgs e)
-        { /*
+        {
             hotel selectedHotel = new hotel();
-            foreach (hotel possibility in hotels)
+            foreach (hotel possibleHotel in hotels)
             {
-                System.Diagnostics.Debug.WriteLine("Hotel: " + possibility.HotelName + "\n Selected hotel: " + hotelSelectDdl.SelectedValue);
-                if (possibility.HotelName == hotelSelectDdl.SelectedValue)
+                System.Diagnostics.Debug.WriteLine("Hotel: " + possibleHotel.HotelName + "\n Selected hotel: " + hotelSelectDdl.SelectedValue);
+                if (possibleHotel.HotelName == hotelSelectDdl.SelectedValue)
                 {
-                    selectedHotel = possibility;
+                    selectedHotel = possibleHotel;
 
-                    System.Diagnostics.Debug.WriteLine("found hotel ");
+                    System.Diagnostics.Debug.WriteLine("found hotel");
                     break;
                 }
-
             }
+
             Customer.Hotel = selectedHotel;
-            roomOptionsDdl.Items.Clear();
-            foreach (KeyValuePair<string, int> pairing in Customer.Hotel.HotelRoomPriceDict)
-            {
-                roomOptionsDdl.Items.Add(new ListItem(pairing.Key, pairing.Value.ToString()));
-            } */
         }
 
         protected void roomOptionsDdl_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,6 +145,9 @@ namespace HotelReserve
         {
             if (Customer.Hotel == null)
             {
+                Customer.CheckIn = DateTime.Parse(checkInDate.Text);
+                Customer.CheckOut = DateTime.Parse(checkOutDate.Text);
+
                 hotel selectedHotel = new hotel();
                 foreach (hotel possibleHotel in hotels)
                 {
@@ -175,8 +162,11 @@ namespace HotelReserve
                 }
 
                 Customer.Hotel = selectedHotel;
+                Customer.CheckIn = DateTime.Parse(checkInDate.Text);
+                Customer.CheckOut = DateTime.Parse(checkOutDate.Text);
             }
             Customer.NumberOfRooms = int.Parse(roomOptionsDdl.SelectedValue);
+            Response.Redirect("RoomSelect.aspx");
         }
     }
 }
