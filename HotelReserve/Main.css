@@ -1,6 +1,11 @@
 ﻿body {
 }
 
+input{
+    border-color:dodgerblue;
+    fill:cornflowerblue;
+}
+
 #selections {
     width: 90%;
     min-width: 400px;
@@ -18,6 +23,9 @@
 #hotelRooms {
     width:600px;
 }
+#checkOut {
+    float:right;
+}
 
 .leftLabel {
     float:left;
@@ -26,6 +34,10 @@
 .AlignTable {
     align-items:center;
     text-align:left;
+}
+.body {
+    max-width:1280px;
+    min-width:800px;
 }
 .hotelImage {
     width: 600px;
