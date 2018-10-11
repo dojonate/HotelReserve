@@ -41,7 +41,7 @@
                 </asp:TableRow>
                 <asp:TableRow columnspan="2" runat="server" Width="100%">
                     <asp:TableCell runat="server">
-                        <asp:Button ID="findHotelLbl" runat="server" Text="Find a Hotel" BorderColor="Red" BackColor="#FF3300" OnClick="findHotelLbl_Click" PostBackUrl="~/View/RoomSelect.aspx" />
+                        <asp:Button ID="findHotelLbl" runat="server" Text="Find a Hotel" BorderColor="Red" BackColor="#FF3300" OnClick="findHotelLbl_Click" />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
